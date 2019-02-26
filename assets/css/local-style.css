@@ -1,0 +1,11 @@
+ul {
+    list-style-type: unset;
+    padding-left: 20px;
+}
+ul li {
+    font-size: 16px;
+}
+
+.sidebar-menu ul {
+    padding-left: 0;
+}
