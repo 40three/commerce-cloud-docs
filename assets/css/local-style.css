@@ -1,8 +1,13 @@
-ul {
-    list-style-type: unset;
+ul, ol {
     padding-left: 20px;
 }
-ul li {
+ul {
+    list-style-type: unset;
+}
+ol {
+    list-style-type: decimal;
+}
+li {
     font-size: 16px;
 }
 
