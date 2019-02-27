@@ -49,12 +49,6 @@ whiteColor = "#ffffff"
 
           [[Languages.en.menu.main]]
           parent = "pages"
-          name = "Installation"
-          URL = "/installation"
-          weight = 2
-
-          [[Languages.en.menu.main]]
-          parent = "pages"
           name = "Billing and Pricing"
           URL = "/billing-pricing"
           weight = 3
