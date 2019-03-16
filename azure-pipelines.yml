@@ -2,7 +2,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
   
 steps:
-  - script: apt-get install hugo
+  - script: sudo apt-get install hugo
     displayName: Install hugo binaries
   - script: hugo
     displayName: Compile web site
