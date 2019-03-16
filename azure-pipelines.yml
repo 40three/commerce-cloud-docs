@@ -2,6 +2,8 @@ pool:
   vmImage: 'Ubuntu 16.04'
   
 steps:
+  - checkout: self
+    submodules: true
   - script: sudo apt-get -qq install hugo
     displayName: Install hugo binaries
   - script: hugo
