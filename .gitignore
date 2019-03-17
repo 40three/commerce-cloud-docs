@@ -1,3 +1,4 @@
 
 # ignore generated output
 resources/_gen/
+public/
