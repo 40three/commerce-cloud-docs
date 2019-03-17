@@ -3,6 +3,7 @@ pool:
 
 variables:
   hugoVersion: '0.54.0'
+  group: '40three docker registry'
 
 steps:
   - checkout: self
@@ -17,4 +18,4 @@ steps:
     displayName: Compile web site
   - script: docker login -u $(docker.username) -p $(docker.password)
     displayName: Login to 40three docker registry
-    
+
