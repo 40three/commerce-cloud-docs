@@ -8,8 +8,8 @@ steps:
   - checkout: self
     submodules: true
   - script: |
-       wget https://github.com/gohugoio/hugo/releases/download/v$(hugoVersion)/hugo_$(hugoVersion)_Linux-64bit.deb
-       sudo dpkg -i hugo_$(hugoVersion)
+       wget -q https://github.com/gohugoio/hugo/releases/download/v$(hugoVersion)/hugo_$(hugoVersion)_Linux-64bit.deb
+       sudo dpkg -i hugo_$(hugoVersion)_Linux-64bit.deb
     displayName: Install hugo binaries
   - script: hugo version
     displayName: Output hugo version number for debugging
