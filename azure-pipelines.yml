@@ -6,5 +6,7 @@ steps:
     submodules: true
   - script: sudo apt-get -qq install hugo
     displayName: Install hugo binaries
+  - script: hugo version
+    displaName: Output hugo version number for debugging
   - script: hugo
     displayName: Compile web site
