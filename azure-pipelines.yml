@@ -5,9 +5,10 @@ variables:
   - name: hugoVersion
     value: '0.54.0'
   - name: tagName
-    value: $(Date:yyyyMMdd)$(Rev:.r)
+    value: $(Build.BuildId)
   - group: '40three docker registry'
 
+name: $(Date:yyyyMMdd)$(Rev:.r)
 steps:
   - checkout: self
     submodules: true
