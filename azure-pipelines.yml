@@ -16,6 +16,6 @@ steps:
     displayName: Output hugo version number for debugging
   - script: hugo
     displayName: Compile web site
-  - script: docker login -u $(docker.username) -p $(docker.password)
+  - script: docker login -u $(dockerUsername) -p $(dockerPassword)
     displayName: Login to 40three docker registry
 
