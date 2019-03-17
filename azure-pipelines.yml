@@ -2,8 +2,9 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 variables:
-  hugoVersion: '0.54.0'
-  group: '40three docker registry'
+  - name: hugoVersion
+    value: '0.54.0'
+  - group: '40three docker registry'
 
 steps:
   - checkout: self
