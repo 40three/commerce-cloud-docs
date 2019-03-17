@@ -4,6 +4,8 @@ pool:
 variables:
   - name: hugoVersion
     value: '0.54.0'
+  - name: tagName
+    value: $(Date:yyyyMMdd)$(Rev:.r)
   - group: '40three docker registry'
 
 steps:
@@ -15,8 +17,10 @@ steps:
     displayName: Install hugo binaries
   - script: hugo version
     displayName: Output hugo version number for debugging
-  - script: hugo
-    displayName: Compile web site
+  - script: ./support/docker/docker-build.sh $(tagName)
+    displayName: Build website as docker container
   - script: docker login $(dockerRegistry) -u $(dockerUsername) -p '$(dockerPassword)'
     displayName: Login to 40three docker registry
+  - script: docker push 40three.azurecr.io/commerce-cloud-docs:$(tagName)
+    displayName: Push docker image
 
