@@ -2,14 +2,14 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 variables:
-  hugoVersion: 0.54.0
+  hugoVersion: '0.54.0'
 
 steps:
   - checkout: self
     submodules: true
   - script: |
-       wget https://github.com/gohugoio/hugo/releases/download/v0.30.2/hugo_${hugoVersion}_Linux-64bit.deb
-       sudo dpkg -i hugo_${hugoVersion}
+       wget https://github.com/gohugoio/hugo/releases/download/v$(hugoVersion)/hugo_$(hugoVersion)_Linux-64bit.deb
+       sudo dpkg -i hugo_$(hugoVersion)
     displayName: Install hugo binaries
   - script: hugo version
     displayName: Output hugo version number for debugging
