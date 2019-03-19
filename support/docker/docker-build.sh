@@ -2,6 +2,7 @@
 #
 # Run ./docker-build.sh TAGNAME, e.g. ./docker-build.sh snapshot
 #
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 cd ../..
