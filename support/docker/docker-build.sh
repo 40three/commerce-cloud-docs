@@ -22,7 +22,7 @@ fi
 if [ -d "./.context" ]; then rm -Rf ./.context; fi
 mkdir -p ./.context/html
 
-cp ./tools/docker/context/* ./.context/
+cp ./support/docker/context/* ./.context/
 cp -r ./public/* ./.context/html/
 
 # BUILD DOCKER IMAGE
