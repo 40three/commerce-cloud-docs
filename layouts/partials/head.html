@@ -40,10 +40,10 @@
   {{ $styles := resources.Get "css/local-style.css" | minify}}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
-  {{ "<!-- jquiry -->" | safeHTML }}
+  {{ "<!-- jquery -->" | safeHTML }}
   <script src="{{ .Site.BaseURL }}plugins/jquery/jquery-1.12.4.js"></script>
 
-  {{ "<!-- jquary ui -->" | safeHTML }}
+  {{ "<!-- jquery ui -->" | safeHTML }}
   <script src="{{ .Site.BaseURL }}plugins/jquery/jquery-ui.js"></script>
 
   {{ "<!--Favicon-->" | safeHTML }}
