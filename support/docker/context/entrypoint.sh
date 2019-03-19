@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cd /app/html
 
 # create file for health check
